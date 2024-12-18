@@ -1,0 +1,40 @@
+---
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import Sidebar from "../components/Sidebar.astro"
+import '../styles/global.css'
+
+const { title, metaDesc, isDark } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{title} - Our Cool Website</title>
+	<meta name="description" content={metaDesc}>
+</head>
+<body class={isDark ? 'dark-mode' : 'light-mode'}>
+	<div class="container">
+		<Header />
+		<main>
+			<div class="content">
+				<slot />
+			</div>
+			<Sidebar username="johnsmith" />
+		</main>
+		<Footer />
+	</div>
+</body>
+</html>
+
+<style>
+	main {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.content {
+		flex: 1 0;
+	}
+</style>

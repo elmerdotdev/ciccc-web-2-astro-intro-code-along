@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const pageTitle = "Home"
+const pageDesc = "This is the homepage"
+---
+<Layout title={pageTitle} metaDesc={pageDesc} isDark={true}>
+	<h1>{pageTitle}</h1>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum aperiam perspiciatis vitae distinctio nesciunt similique consectetur pariatur dicta enim.</p>
+</Layout>
+
+<style>
+	h1 {
+		color: red;
+	}
+
+	p {
+		color: green;
+		font-style: normal;
+	}
+
+	section {
+		background-color: yellow;
+		color: red;
+	}
+</style>

@@ -1,0 +1,50 @@
+---
+import Logo from "./Logo.astro"
+---
+
+<header>
+  <Logo />
+  <nav>
+    <menu>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About Us</a>
+      </li>
+      <li>
+        <a href="/our-team">Our Team</a>
+      </li>
+      <li>
+        <a href="/contact">Contact Us</a>
+      </li>
+      <li>
+        <a href="https://google.com">Google.com</a>
+      </li>
+    </menu>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+  }
+
+  menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+  }
+
+  li {
+    text-decoration: underline;
+  }
+
+  a {
+    color: orange;
+  }
+</style>

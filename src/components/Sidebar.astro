@@ -1,0 +1,22 @@
+---
+const { username } = Astro.props
+---
+
+<aside>
+  <h3>Welcome, {username ?? 'guest'}</h3>
+  <ol>
+    <li>Some text 1</li>
+    <li>Some text 2</li>
+    <li>Some text 3</li>
+    <li>Some text 4</li>
+    <li>Some text 5</li>
+  </ol>
+</aside>
+
+<style>
+  aside {
+    flex: 0 1 200px;
+    background-color: black;
+    color: white;
+  }
+</style>

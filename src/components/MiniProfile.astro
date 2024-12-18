@@ -1,0 +1,20 @@
+---
+const { userData, isLoggedIn } = Astro.props
+---
+
+<div>
+  <ul>
+    <li>First Name: {userData.firstname ?? "Guest"}</li>
+    <li>Last Name: {userData.lastname ?? "Guest"}</li>
+    <li>Age: {userData.age ?? 0}</li>
+    <li>Is Married: {userData.isMarried ? "Yes" : "No"}</li>
+    <li>Is Logged In: {isLoggedIn ? "Logged In" : "Logged Out"}</li>
+  </ul>
+</div>
+
+<style>
+  li {
+    color: purple;
+    font-weight: 700;
+  }
+</style>

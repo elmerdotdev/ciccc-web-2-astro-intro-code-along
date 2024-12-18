@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro"
+import MiniProfile from "../components/MiniProfile.astro"
+
+const pageTitle = "About Us"
+const pageDesc = "This is the about page"
+
+const user = {
+  firstname: "John",
+  lastname: "Smith",
+  age: 50,
+  isMarried: true
+}
+
+const user2 = {
+  firstname: "Joe",
+  lastname: "Moe",
+  age: 55,
+  isMarried: false
+}
+---
+<Layout title={pageTitle} metaDesc={pageDesc}>
+  <h1>{pageTitle}</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, iste.</p>
+  <MiniProfile userData={user} isLoggedIn={true} />
+  <MiniProfile userData={user2} isLoggedIn={false} />
+</Layout>
